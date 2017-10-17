@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Ficheros</string>
+    <string name="btnEjercicio1">Escribir en intera</string>
+    <string name="btnEjercicio2">Escribir en externa</string>
+    <string name="btnEjercicio3">Leer ficheros</string>
+    <string name="btnEjercicio4">Codificacion</string>
+    <string name="txvOperando1">Operando 1</string>
+    <string name="txvOperando2">Operando 2</string>
+    <string name="btnSumar">+</string>
+    <string name="txvResultado">Resultado</string>
+    <string name="txvPropiedades">Propiedades:</string>
+</resources>
