@@ -1,5 +1,6 @@
 package com.example.ficheros;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,6 +17,7 @@ public class EscribirInterna extends AppCompatActivity implements View.OnClickLi
     private Button botonSumar;
     public final static String NOMBREFICHERO = "resultado.txt";
     Memoria miMemoria;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,27 +36,22 @@ public class EscribirInterna extends AppCompatActivity implements View.OnClickLi
         int r;
         String texto;
 
-        if (view == botonSumar)
-        {
+        if (view == botonSumar) {
             try {
                 r = Integer.parseInt(operando1.getText().toString()) + Integer.parseInt(operando2.getText().toString());
                 texto = String.valueOf(r);
-            }
-            catch (NumberFormatException e)
-            {
+            } catch (NumberFormatException e) {
                 Log.e("Error", e.getMessage());
                 texto = "0";
-                Toast.makeText(getApplicationContext(),"Error: " + e.getMessage(), Toast.LENGTH_SHORT);
+                Toast.makeText(getApplicationContext(), "Error: " + e.getMessage(), Toast.LENGTH_SHORT);
             }
             resultado.setText(texto);
-            if (miMemoria.escribirInterna(NOMBREFICHERO, texto, false, "UTF-8"))
-            {
+            if (miMemoria.escribirInterna(NOMBREFICHERO, texto, false, "UTF-8")) {
                 propiedades.setText(miMemoria.mostrarPropiedadesInterna(NOMBREFICHERO));
-            }
-            else
-            {
+            } else {
                 propiedades.setText("Error al escribir en el fichero " + NOMBREFICHERO);
             }
         }
     }
+
 }

@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button boton1, boton2,boton3,boton4;
+    Button boton1, boton2,boton3,boton4, boton5;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,10 +17,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         boton2 = (Button) findViewById(R.id.btnEjercicio2);
         boton3 = (Button) findViewById(R.id.btnEjercicio3);
         boton4 = (Button) findViewById(R.id.btnEjercicio4);
+        boton5 = (Button) findViewById(R.id.btnEjercicio5);
         boton1.setOnClickListener(this);
         boton2.setOnClickListener(this);
         boton3.setOnClickListener(this);
         boton4.setOnClickListener(this);
+        boton5.setOnClickListener(this);
     }
 
     @Override
@@ -44,6 +46,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (view == boton4)
         {
             i = new Intent(this, Codificacion.class);
+            startActivity(i);
+        }
+        if (view == boton5)
+        {
+            i = new Intent(this, FileExplorer.class);
             startActivity(i);
         }
     }

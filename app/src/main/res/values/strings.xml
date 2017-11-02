@@ -4,6 +4,7 @@
     <string name="btnEjercicio2">Escribir en externa</string>
     <string name="btnEjercicio3">Leer ficheros</string>
     <string name="btnEjercicio4">Codificacion</string>
+    <string name="btnEjercicio5">FileExplorer</string>
     <string name="txvOperando1">Operando 1</string>
     <string name="txvOperando2">Operando 2</string>
     <string name="btnSumar">+</string>
